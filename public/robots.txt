@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /recipes/*/edit
+
+Sitemap: https://kitchengathering.lovable.app/sitemap.xml

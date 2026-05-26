@@ -1,0 +1,1 @@
+ALTER TABLE public.recipes ADD COLUMN IF NOT EXISTS cuisine text, ADD COLUMN IF NOT EXISTS meal_type text;
