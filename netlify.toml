@@ -1,0 +1,21 @@
+[build]
+  command = "vite build"
+  publish = "dist/client"
+
+[dev]
+  command = "vite dev"
+  port = 3000
+  targetPort = 3001
+
+# SPA fallback — TanStack Start handles SSR routing, but this ensures
+# client-side navigation works on direct URL visits
+[[redirects]]
+  from = "/*"
+  to = "/.netlify/functions/server"
+  status = 200
+
+# Cache static assets
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
